@@ -62,6 +62,10 @@ Admin only needed for system install (`C:\Program Files\cursor`). User install (
 
 Cursor updates overwrite the patch. Just run the patcher again.
 
+## Troubleshooting
+
+If problems occur: **reinstall Cursor** – this fixes most issues.
+
 ## Thanks
 
 [Cursor](https://cursor.com) for the IDE. A native toggle for the checksum warning (like VS Code has) would've been nice.
