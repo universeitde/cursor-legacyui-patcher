@@ -7,6 +7,8 @@
 
 Restores the full **Change Layout** menu in Cursor: Agent, Editor, Zen, Browser + toggles removed in newer versions.
 
+**Foreword:** This project restores layout options we miss. We ask Cursor for their understanding and hope these options will be available natively one day. Thank you for the IDE.
+
 ![Patched layout menu](https://raw.githubusercontent.com/universeitde/cursor-legacyui-patcher/refs/heads/main/assets/patched_screenshot.png)
 
 ## Features
@@ -25,10 +27,13 @@ Restores the full **Change Layout** menu in Cursor: Agent, Editor, Zen, Browser 
 ## Quick Start
 
 1. **Close Cursor** completely (check Task Manager)
-2. **Run** `run-patcher.bat` (or `.\patcher.ps1`)
-3. **Start Cursor**, gear icon top right → full layout menu
+2. **Pick your Cursor version** – go into the matching folder (e.g. `2.5.22\`)
+3. **Run** `run-patcher.bat` (or `.\patcher.ps1`)
+4. **Start Cursor**, gear icon top right → full layout menu
 
 Admin only needed for system install (`C:\Program Files\cursor`). User install (`%LOCALAPPDATA%\Programs\cursor`) runs without elevation.
+
+> **Version note**: Use the patcher from the folder that matches your Cursor version. If your version has no folder yet, an existing one may work, but it is untested.
 
 ## Options
 
@@ -40,16 +45,14 @@ Admin only needed for system install (`C:\Program Files\cursor`). User install (
 .\patcher.ps1 -Path "D:\Tools\Cursor"
 ```
 
-## Tested With
+## Supported Versions
 
-| | |
-|---|---|
-| **Cursor** | 2.5.22 (system setup) |
-| **VS Code** | 1.105.1 |
-| **Commit** | `0eda506a36f70f8dc866c1ea642fcaf620090080` |
-| **Electron** | 39.4.0 |
-| **Node.js** | 22.22.0 |
-| **OS** | Windows 10/11 x64 |
+| Version | Folder | Status |
+|---------|--------|--------|
+| 2.5.22 | `2.5.22/` | Tested |
+| … | *add new version folders as needed* | |
+
+Tested with: Cursor 2.5.22 (system setup), VS Code 1.105.1, Electron 39.4.0, Node.js 22.22.0, Windows 10/11 x64.
 
 ## Technical Details
 
@@ -68,18 +71,8 @@ If problems occur: **reinstall Cursor** – this fixes most issues.
 
 ## Thanks
 
-[Cursor](https://cursor.com) for the IDE. A native toggle for the checksum warning (like VS Code has) would've been nice.
+Thank you to [Cursor](https://cursor.com) for the IDE — we really appreciate it. We hope you’ll understand this patcher; we’d love to see these layout options and the checksum handling as native settings instead.
 
 ## Disclaimer
 
 Use at your own risk. Not official Cursor.
-
-## Structure
-
-```
-cursor-legacyui-patcher/
-├── patcher.ps1
-├── run-patcher.bat
-├── assets/patched_screenshot.png
-└── README.md
-```
