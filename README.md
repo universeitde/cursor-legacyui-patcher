@@ -1,15 +1,22 @@
 # Cursor Layout Menu Patcher
 
+<div align="center">
+
 [![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)](https://docs.microsoft.com/powershell)
-[![Cursor](https://img.shields.io/badge/Tested%20on-Cursor%202.5.22-000000?style=flat-square)](https://cursor.com)
+[![Cursor](https://img.shields.io/badge/Cursor%20Stable%202.5.25-000000?style=flat-square&logo=cursor)](https://cursor.com)
+[![VS Code](https://img.shields.io/badge/VS%20Code-1.105.1-007ACC?style=flat-square&logo=visualstudiocode)](https://code.visualstudio.com)
+[![Electron](https://img.shields.io/badge/Electron-39.4.0-47848F?style=flat-square&logo=electron)](https://electronjs.org)
+[![Node](https://img.shields.io/badge/Node.js-22.22.0-339933?style=flat-square&logo=nodedotjs)](https://nodejs.org)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://opensource.org/licenses/MIT)
+
+![Patched layout menu](https://raw.githubusercontent.com/universeitde/cursor-legacyui-patcher/refs/heads/main/assets/patched_screenshot.png)
+
+</div>
 
 Restores the full **Change Layout** menu in Cursor: Agent, Editor, Zen, Browser + toggles removed in newer versions.
 
 **Foreword:** This project restores layout options we miss. We ask Cursor for their understanding and hope these options will be available natively one day. Thank you for the IDE.
-
-![Patched layout menu](https://raw.githubusercontent.com/universeitde/cursor-legacyui-patcher/refs/heads/main/assets/patched_screenshot.png)
 
 ## Features
 
@@ -52,8 +59,6 @@ Admin only needed for system install (`C:\Program Files\cursor`). User install (
 | 2.5.22 | `2.5.22/` | Tested |
 | … | *add new version folders as needed* | |
 
-Tested with: Cursor 2.5.22 (system setup), VS Code 1.105.1, Electron 39.4.0, Node.js 22.22.0, Windows 10/11 x64.
-
 ## Technical Details
 
 - **Target**: `resources\app\out\vs\workbench\workbench.desktop.main.js`
@@ -68,6 +73,16 @@ Cursor updates overwrite the patch. Just run the patcher again.
 ## Troubleshooting
 
 If problems occur: **reinstall Cursor** – this fixes most issues.
+
+## Contributing
+
+Contributions are welcome. Possible ways to help:
+
+- **Pull requests** – fixes, improvements, or support for new Cursor versions (e.g. new version folders with updated patch patterns).
+- **Port to macOS** – this patcher is Windows-only; a Mac port (e.g. shell script or small app) would be a great addition.
+- **Docs, issues, ideas** – open an issue to discuss or suggest something.
+
+Fork the repo, make your changes, and open a pull request. Please keep version-specific logic in the matching version folder.
 
 ## Thanks
 
