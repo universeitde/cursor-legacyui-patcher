@@ -4,7 +4,7 @@
 
 [![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)](https://docs.microsoft.com/powershell)
-[![Cursor](https://img.shields.io/badge/Cursor%20Stable%202.5.25-000000?style=flat-square&logo=cursor)](https://cursor.com)
+[![Cursor](https://img.shields.io/badge/Cursor%202.6.0--pre-000000?style=flat-square&logo=cursor)](https://cursor.com)
 [![VS Code](https://img.shields.io/badge/VS%20Code-1.105.1-007ACC?style=flat-square&logo=visualstudiocode)](https://code.visualstudio.com)
 [![Electron](https://img.shields.io/badge/Electron-39.4.0-47848F?style=flat-square&logo=electron)](https://electronjs.org)
 [![Node](https://img.shields.io/badge/Node.js-22.22.0-339933?style=flat-square&logo=nodedotjs)](https://nodejs.org)
@@ -34,7 +34,7 @@ Restores the full **Change Layout** menu in Cursor: Agent, Editor, Zen, Browser 
 ## Quick Start
 
 1. **Close Cursor** completely (check Task Manager)
-2. **Pick your Cursor version** – go into the matching folder (e.g. `2.5.22\`)
+2. **Pick your Cursor version** – go into the matching folder (e.g. `2.6.0-pre.33.patch.0\`)
 3. **Run** `run-patcher.bat` (or `.\patcher.ps1`)
 4. **Start Cursor**, gear icon top right → full layout menu
 
@@ -56,6 +56,7 @@ Admin only needed for system install (`C:\Program Files\cursor`). User install (
 
 | Version | Folder | Status |
 |---------|--------|--------|
+| 2.6.0-pre | `2.6.0-pre.33.patch.0/` | Tested |
 | 2.5.22 | `2.5.22/` | Tested |
 | … | *add new version folders as needed* | |
 
