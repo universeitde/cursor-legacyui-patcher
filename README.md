@@ -2,12 +2,18 @@
 
 
 
+<div align="center">
+
 [![Windows 10 | 11](https://img.shields.io/badge/Windows_10_%7C_11-0078D6?style=flat&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![Cursor 2.5+ | 2.6 | 2.7](https://img.shields.io/badge/Cursor_2.5%2B_%7C_2.6_%7C_2.7-000000?style=flat&logo=cursor&logoColor=white)](https://cursor.com)
 [![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+</div>
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/universeitde/cursor-legacyui-patcher/refs/heads/main/assets/patched_2.7.0.png" alt="Patched Change Layout menu: presets (Agent, Editor, Zen, Browser), toggles, Agent Sidebar, Cursor Settings" width="600" />
+</div>
 
 Patched layout menu
 
