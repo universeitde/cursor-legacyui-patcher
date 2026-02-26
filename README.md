@@ -2,13 +2,10 @@
 
 
 
-[Windows](https://www.microsoft.com/windows)
-[PowerShell](https://docs.microsoft.com/powershell)
-[Cursor](https://cursor.com)
-[VS Code](https://code.visualstudio.com)
-[Electron](https://electronjs.org)
-[Node](https://nodejs.org)
-[License](https://opensource.org/licenses/MIT)
+[![Windows 10 | 11](https://img.shields.io/badge/Windows_10_%7C_11-0078D6?style=flat&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
+[![Cursor 2.5+ | 2.6](https://img.shields.io/badge/Cursor_2.5%2B_%7C_2.6-000000?style=flat&logo=cursor&logoColor=white)](https://cursor.com)
+[![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Patched layout menu
 
