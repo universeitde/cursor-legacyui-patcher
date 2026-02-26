@@ -7,3 +7,6 @@ Desktop.ini
 .idea/
 *.swp
 *.swo
+
+# Unnecessary files
+README.txt

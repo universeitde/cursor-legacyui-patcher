@@ -3,7 +3,7 @@
 
 
 [![Windows 10 | 11](https://img.shields.io/badge/Windows_10_%7C_11-0078D6?style=flat&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-[![Cursor 2.5+ | 2.6](https://img.shields.io/badge/Cursor_2.5%2B_%7C_2.6-000000?style=flat&logo=cursor&logoColor=white)](https://cursor.com)
+[![Cursor 2.5+ | 2.6.0-pre.43](https://img.shields.io/badge/Cursor_2.5%2B_%7C_2.6.0--pre.43-000000?style=flat&logo=cursor&logoColor=white)](https://cursor.com)
 [![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -13,7 +13,9 @@ Patched layout menu
 
 Restores the full **Change Layout** menu in Cursor: Agent, Editor, Zen, Browser + toggles removed in newer versions.
 
-**Foreword:** This project restores layout options we miss. We ask Cursor for their understanding and hope these options will be available natively one day. Thank you for the IDE.
+**Foreword:** This project restores layout options we miss. We ask Cursor for their understanding and hope these options will be available natively one day. Thank you for the IDE. 
+
+**Updates:** Cursor is currently making massive changes to the editor; if you’re on the latest nightly, the patch may take a bit longer to support your version-we’ll catch up as soon as we can.
 
 ## Features
 
@@ -54,6 +56,7 @@ Admin only needed for system install (`C:\Program Files\cursor`). User install (
 
 | Version   | Folder                              | Status   |
 | --------- | ----------------------------------- | -------- |
+| 2.6.0-pre.43 | `2.6.0-pre.43.patch.0/`          | Tested ✅ |
 | 2.6.0-pre | `2.6.0-pre.33.patch.0/`             | Tested ✅ |
 | 2.5.25    | `2.5.25/`                           | Tested ✅ |
 | …         | *add new version folders as needed* |          |
