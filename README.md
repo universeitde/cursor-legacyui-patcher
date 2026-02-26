@@ -3,9 +3,11 @@
 
 
 [![Windows 10 | 11](https://img.shields.io/badge/Windows_10_%7C_11-0078D6?style=flat&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-[![Cursor 2.5+ | 2.6.0-pre.43](https://img.shields.io/badge/Cursor_2.5%2B_%7C_2.6.0--pre.43-000000?style=flat&logo=cursor&logoColor=white)](https://cursor.com)
+[![Cursor 2.5+ | 2.6 | 2.7](https://img.shields.io/badge/Cursor_2.5%2B_%7C_2.6_%7C_2.7-000000?style=flat&logo=cursor&logoColor=white)](https://cursor.com)
 [![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
 Patched layout menu
 
@@ -33,7 +35,7 @@ Restores the full **Change Layout** menu in Cursor: Agent, Editor, Zen, Browser 
 ## Quick Start
 
 1. **Close Cursor** completely (check Task Manager)
-2. **Pick your Cursor version** – go into the matching folder (e.g. `2.6.0-pre.33.patch.0\`)
+2. **Pick your Cursor version** – go into the matching folder (e.g. `2.7.0-pre.1.patch.0\` or `2.6.0-pre.43.patch.0\`)
 3. **Run** `run-patcher.bat` (or `.\patcher.ps1`)
 4. **Start Cursor**, gear icon top right → full layout menu
 
@@ -54,12 +56,13 @@ Admin only needed for system install (`C:\Program Files\cursor`). User install (
 ## Supported Versions
 
 
-| Version   | Folder                              | Status   |
-| --------- | ----------------------------------- | -------- |
-| 2.6.0-pre.43 | `2.6.0-pre.43.patch.0/`          | Tested ✅ |
-| 2.6.0-pre | `2.6.0-pre.33.patch.0/`             | Tested ✅ |
-| 2.5.25    | `2.5.25/`                           | Tested ✅ |
-| …         | *add new version folders as needed* |          |
+| Version      | Folder                        | Status   |
+| ------------ | ----------------------------- | -------- |
+| 2.7.0-pre.1  | `2.7.0-pre.1.patch.0/`        | Tested ✅ |
+| 2.6.0-pre.43 | `2.6.0-pre.43.patch.0/`       | Tested ✅ |
+| 2.6.0-pre    | `2.6.0-pre.33.patch.0/`       | Tested ✅ |
+| 2.5.25       | `2.5.25/`                     | Tested ✅ |
+| …            | *add new version folders as needed* |          |
 
 
 ## Technical Details
