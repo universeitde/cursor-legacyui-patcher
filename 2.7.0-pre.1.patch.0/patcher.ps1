@@ -140,6 +140,13 @@ $Patches = @(
         Replace = '{getAnchor:()=>$,anchorAlignment:1,anchorPosition:0,render:H=>{try{const W=FF(a,u)?C:void 0;return i.createInstance($Aw'
     },
     @{
+        # Lower layout menu z-index so Rename/Delete context menu (mentions) appears on top.
+        Name                = "layout_menu_lower_zindex"
+        AllowLengthMismatch = $true
+        Search  = 'this.element.className="agent-layout-quick-menu",n.appendChild(this.element),this.buildContent'
+        Replace = 'this.element.className="agent-layout-quick-menu",n.appendChild(this.element),(()=>{try{const cv=this.element.closest?.(".context-view");cv&&(cv.style.zIndex="2500")}catch{}})(),this.buildContent'
+    },
+    @{
         # Restore full toggle rows. Ei (not xi) for layoutService.isVisible in 2.7.
         Name                = "buildContent_full_27"
         AllowLengthMismatch = $true
