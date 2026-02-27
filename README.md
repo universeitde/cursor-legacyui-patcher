@@ -109,7 +109,7 @@ Fork the repo, make your changes, and open a pull request. Please keep version-s
 
 ## Thanks
 
-Thank you to [Cursor](https://cursor.com) for the IDE — we really appreciate it. We hope you’ll understand this patcher; we’d love to see these layout options and the checksum handling as native settings instead.
+Thank you to [Cursor](https://cursor.com) for the IDE — we really appreciate it. We hope you’ll understand this patcher; we’d love to see these layout options as native settings instead.
 
 ## Disclaimer
 
