@@ -28,7 +28,7 @@ Restores the full **Change Layout** menu in Cursor: Agent, Editor, Zen, Browser 
 ## Features
 
 - **Presets**: Agent, Editor, Zen, Browser
-- **Toggles**: Agents, Chat, Editors, Panel, Sidebar, Status Bar
+- **Toggles**: Agents, Chat, Editors, Panel, Sidebar, **Inline Diffs**, Status Bar
 - **Agent Sidebar** position (Left/Right)
 - **Settings** shortcut + **Add** btn
 
@@ -70,6 +70,17 @@ Admin only needed for system install (`C:\Program Files\cursor`). User install (
 | 2.5.25       | `2.5.25/`                     | Tested ✅ |
 | …            | *add new version folders as needed* |          |
 
+
+## Possible Future Additions
+
+The layout menu could be extended with more quick toggles, e.g.:
+
+- **Minimap** – show/hide the editor minimap
+- **Breadcrumbs** – toggle breadcrumb navigation
+- **Sticky Scroll** – enable/disable sticky header in editor
+- **Word Wrap** – toggle line wrapping
+
+These would require matching services/commands and may vary per Cursor version.
 
 ## Technical Details
 
