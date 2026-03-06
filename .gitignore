@@ -11,3 +11,9 @@ analyze.ps1
 
 # Unnecessary files
 README.txt
+
+# Extracted installer temp
+extracted_*/
+
+# Installer (users get Cursor from cursor.com)
+*.exe

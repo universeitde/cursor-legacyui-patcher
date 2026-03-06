@@ -111,6 +111,21 @@ function Test-CursorNotRunning {
         exit 1
     }
 }
+function Repair-CodeShLauncher {
+    $binDir = Join-Path $Path "resources\app\bin"
+    $cursorPath = Join-Path $binDir "cursor"
+    $codePath = Join-Path $binDir "code"
+    if (-not (Test-Path $codePath) -and (Test-Path $cursorPath)) {
+        try {
+            Copy-Item -Path $cursorPath -Destination $codePath -Force
+            Write-ColorOutput "  Fixed: created bin\code (copy of cursor) for Remote SSH" "Green"
+        } catch {
+            Write-ColorOutput "  Warning: Could not create bin\code - $($_.Exception.Message)" "Yellow"
+        }
+    } elseif (Test-Path $codePath) {
+        Write-ColorOutput "  bin\code already exists (Remote SSH fix OK)" "Gray"
+    }
+}
 function Get-LatestBackup {
     param($Dir, $Pattern)
     $b = Get-ChildItem $Dir -Filter $Pattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending
@@ -187,6 +202,8 @@ function Invoke-Patch {
     if (!(Test-Path $TargetFile)) { Write-ColorOutput "ERROR: Workbench not found." "Red"; exit 1 }
     if (!(Test-Path $ProductJsonFile)) { Write-ColorOutput "ERROR: product.json not found." "Red"; exit 1 }
     Test-CursorNotRunning
+
+    Repair-CodeShLauncher
 
     $content = [IO.File]::ReadAllText($TargetFile, [Text.Encoding]::UTF8)
     $cls = Get-PatchClassification $content

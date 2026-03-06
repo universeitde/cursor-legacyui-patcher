@@ -198,6 +198,24 @@ function Test-CursorNotRunning {
     }
 }
 
+# Fix "Failed to patch code.sh launcher: ENOENT" - Remote SSH expects resources\app\bin\code (VS Code upstream),
+# but Cursor uses "cursor" instead. Create code as copy of cursor so Remote Extension Host works.
+function Repair-CodeShLauncher {
+    $binDir = Join-Path $Path "resources\app\bin"
+    $cursorPath = Join-Path $binDir "cursor"
+    $codePath = Join-Path $binDir "code"
+    if (-not (Test-Path $codePath) -and (Test-Path $cursorPath)) {
+        try {
+            Copy-Item -Path $cursorPath -Destination $codePath -Force
+            Write-ColorOutput "  Fixed: created bin\code (copy of cursor) for Remote SSH" "Green"
+        } catch {
+            Write-ColorOutput "  Warning: Could not create bin\code - $($_.Exception.Message)" "Yellow"
+        }
+    } elseif (Test-Path $codePath) {
+        Write-ColorOutput "  bin\code already exists (Remote SSH fix OK)" "Gray"
+    }
+}
+
 function Get-LatestBackup {
     param([string]$Dir, [string]$Pattern)
     $backups = Get-ChildItem -Path $Dir -Filter $Pattern -ErrorAction SilentlyContinue |
@@ -411,6 +429,8 @@ function Invoke-Patch {
     }
 
     Test-CursorNotRunning
+
+    Repair-CodeShLauncher
 
     Write-ColorOutput "Reading workbench.desktop.main.js..." "Gray"
     $content = [System.IO.File]::ReadAllText($TargetFile, [System.Text.Encoding]::UTF8)
