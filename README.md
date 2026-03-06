@@ -41,7 +41,7 @@ Restores the full **Change Layout** menu in Cursor: Agent, Editor, Zen, Browser 
 ## Quick Start
 
 1. **Close Cursor** completely (check Task Manager)
-2. **Pick your Cursor version** – go into the matching folder (e.g. `2.7.0-pre.18.patch.0\`, `2.7.0-pre.16.patch.0\`, `2.7.0-pre.1.patch.0\`, `2.6.8.patch.0\`, or `2.5.26\`)
+2. **Pick your Cursor version** – go into the matching folder (e.g. `2.7.0-pre.27.patch.0\`, `2.7.0-pre.18.patch.0\`, `2.7.0-pre.16.patch.0\`, `2.6.8.patch.0\`, or `2.5.26\`)
 3. **Run** `run-patcher.bat` (or `.\patcher.ps1`)
 4. **Start Cursor**, gear icon top right → full layout menu
 
@@ -64,6 +64,7 @@ Admin only needed for system install (`C:\Program Files\cursor`). User install (
 
 | Version      | Folder                        | Status   |
 | ------------ | ----------------------------- | -------- |
+| 2.7.0-pre.27 | `2.7.0-pre.27.patch.0/`       | Tested ✅ |
 | 2.7.0-pre.18 | `2.7.0-pre.18.patch.0/`       | Tested ✅ |
 | 2.7.0-pre.16 | `2.7.0-pre.16.patch.0/`       | Tested ✅ |
 | 2.7.0-pre.1  | `2.7.0-pre.1.patch.0/`        | Tested ✅ |
