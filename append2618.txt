@@ -1,0 +1,1 @@
+appendCursorSettingsButton(n){const e=document.createElement("button");e.type="button",e.className="agent-layout-quick-menu__footer-link";const t=document.createElement("span");t.className="agent-layout-quick-menu__label",t.textContent=_(2939,null),e
