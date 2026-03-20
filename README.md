@@ -1,24 +1,24 @@
 # Cursor Layout Patcher
 
-Stellt das volle **Change Layout**-Menü wieder her (u. a. Agent, Editor, Zen, Browser, Toggles).  
-Patcht `workbench.desktop.main.js` und aktualisiert die Checksums in `product.json` (optional `nls.messages.json`).
+Restores the full **Change Layout** menu (Agent, Editor, Zen, Browser, toggles, and related options).  
+Patches `workbench.desktop.main.js` and updates checksums in `product.json` (and optionally `nls.messages.json`).
 
-## Kurzinfo
+## Quick info
 
-- **Referenz (altes Menü):** `C:\Program Files\cursor-old` (falls vorhanden).
-- **Aktuelle User-Installation:** typisch `%LOCALAPPDATA%\Programs\cursor`.
+- **Reference (old menu still visible):** `C:\Program Files\cursor-old` (if you have it installed).
+- **Typical current install (per-user):** `%LOCALAPPDATA%\Programs\cursor`.
 
-**Vor dem Patchen:** Cursor **komplett beenden**, dann im passenden Ordner `run-patcher.bat` ausführen (oder `patcher.ps1` mit PowerShell).
+**Before patching:** **Quit Cursor completely**, then run `run-patcher.bat` in the matching folder (or run `patcher.ps1` with PowerShell).
 
 ---
 
-## Patcher nach Cursor-Version
+## Patchers by Cursor version
 
-Sortierung: **neueste Version oben**. Ordner unter `Outdated\` sind archivierte / ältere Patch-Sätze, bleiben aber nutzbar, wenn deine installierte Cursor-Version exakt passt.
+Sorted with **newest first**. Folders under `Outdated\` are archived / superseded patch sets; they still work if your installed Cursor version **exactly** matches that row.
 
-| Cursor-Version | Status | Ordner / Patcher |
-|----------------|--------|------------------|
-| **2.7.0-pre.105** | Aktuell | `2.7.0-pre.105.patch.0\` |
+| Cursor version | Status | Folder |
+|----------------|--------|--------|
+| **2.7.0-pre.105** | Current | `2.7.0-pre.105.patch.0\` |
 | 2.7.0-pre.87 | Outdated | `Outdated/2.7.0-pre.87.patch.0\` |
 | 2.7.0-pre.84 | Outdated | `Outdated/2.7.0-pre.84.patch.0\` |
 | 2.7.0-pre.78 | Outdated | `Outdated/2.7.0-pre.78.patch.0\` |
@@ -40,8 +40,8 @@ Sortierung: **neueste Version oben**. Ordner unter `Outdated\` sind archivierte 
 | 2.7.0-pre.17 | Outdated | `Outdated/2.7.0-pre.17.patch.0\` |
 | 2.7.0-pre.16 | Outdated | `Outdated/2.7.0-pre.16.patch.0\` |
 | 2.7.0-pre.1 | Outdated | `Outdated/2.7.0-pre.1.patch.0\` |
-| **2.6.19** | Aktuell | `2.6.19.patch.0\` |
-| **2.6.18** | Aktuell | `2.6.18.patch.0\` |
+| **2.6.19** | Current | `2.6.19.patch.0\` |
+| **2.6.18** | Current | `2.6.18.patch.0\` |
 | 2.6.13 | Outdated | `Outdated/2.6.13.patch.0\` |
 | 2.6.12 | Outdated | `Outdated/2.6.12.patch.0\` |
 | 2.6.8 | Outdated | `Outdated/2.6.8.patch.0\` |
@@ -50,20 +50,20 @@ Sortierung: **neueste Version oben**. Ordner unter `Outdated\` sind archivierte 
 | 2.5.26 | Outdated | `Outdated/2.5.26\` |
 | 2.5.25 | Outdated | `Outdated/2.5.25\` |
 
-### Sonstiges (ohne feste Versionsnummer)
+### Other (no fixed version in table)
 
-| Beschreibung | Dateien |
-|--------------|---------|
-| Generischer / älterer Patcher im Repo-Root (nicht an eine der Tabellenversionen gebunden) | `patcher.ps1`, `run-patcher.bat` |
-
----
-
-## Hinweise
-
-- **Immer den Patcher nutzen, der zu deiner exakten Cursor-Version passt** (siehe `product.json` → `version` oder *About*). Falsche Patch-Sätze führen zu „Targets not found“ oder kaputtem Workbench-JS.
-- **Outdated** heißt nur: es gibt neuere Patch-Ordner im Repo; der alte Ordner kann weiterhin stimmen, wenn deine Installation noch auf dieser Version steht.
-- Ab **2.7.0-pre.87+** enthält `buildContent` u. a. **`appendGlassWindowButton`** („Switch to Glass Window“) — die aktuellen Patch-Sätze behalten das am Ende bei.
+| Description | Files |
+|-------------|-------|
+| Generic / legacy patcher in the repo root (not tied to a row above) | `patcher.ps1`, `run-patcher.bat` |
 
 ---
 
-*Kurzfassung auch in `README.txt`.*
+## Notes
+
+- **Use the patcher that matches your exact Cursor version** (see `product.json` → `version` or *About*). The wrong patch set may report “Targets not found” or break the workbench bundle.
+- **Outdated** only means a newer patch folder exists in this repo; an older folder is still valid if your app is still on that version.
+- From **2.7.0-pre.87** onward, stock `buildContent` includes **`appendGlassWindowButton`** (“Switch to Glass Window”). Current patch sets keep that call at the end of `buildContent`.
+
+---
+
+*A short plain-text summary also lives in `README.txt`.*
