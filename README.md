@@ -16,7 +16,7 @@ Patches `workbench.desktop.main.js` and updates checksums in `product.json` (and
 
 **Stable (release):** the current **release** version this repo tracks is **3.0.9** → use **`3.0.9.patch.0\`**.
 
-**Nightly (pre / Insiders):** the latest **nightly** (pre) build covered here is **2.7.0-pre.180** → use **`2.7.0-pre.180.patch.0\`**.
+**Nightly (pre / Insiders):** the latest **nightly** (pre) build covered here is **2.7.0-pre.183** → use **`2.7.0-pre.183.patch.0\`**.
 
 There are two “current” patch folders on purpose (different channels). Pick the one that matches your installed `product.json` → `version`.
 
@@ -25,7 +25,8 @@ Sorted with **newest first** below. Folders under `Outdated\` are archived / sup
 | Cursor version | Channel | Status | Folder |
 |----------------|---------|--------|--------|
 | **3.0.9** | Release (stable) | Current | `3.0.9.patch.0\` |
-| **2.7.0-pre.180** | Nightly (pre) | Current | `2.7.0-pre.180.patch.0\` |
+| **2.7.0-pre.183** | Nightly (pre) | Current | `2.7.0-pre.183.patch.0\` |
+| 2.7.0-pre.180 | Nightly | Outdated | `Outdated/2.7.0-pre.180.patch.0\` |
 | 2.7.0-pre.177 | Nightly | Outdated | `Outdated/2.7.0-pre.177.patch.0\` |
 | 2.7.0-pre.176 | Outdated | `Outdated/2.7.0-pre.176.patch.0\` |
 | 2.7.0-pre.172 | Outdated | `Outdated/2.7.0-pre.172.patch.0\` |
@@ -82,7 +83,7 @@ Sorted with **newest first** below. Folders under `Outdated\` are archived / sup
 
 ## Notes
 
-- **Use the patcher that matches your exact Cursor version and channel** (see `product.json` → `version` or *About*): **3.0.9** for the stable release, **2.7.0-pre.180** for the latest nightly build covered here. The wrong patch set may report “Targets not found” or break the workbench bundle.
+- **Use the patcher that matches your exact Cursor version and channel** (see `product.json` → `version` or *About*): **3.0.9** for the stable release, **2.7.0-pre.183** for the latest nightly build covered here. The wrong patch set may report “Targets not found” or break the workbench bundle.
 - **Outdated** only means a newer patch folder exists in this repo for that line; an older folder is still valid if your app is still on that version.
 - From **2.7.0-pre.87** onward, stock `buildContent` includes **`appendGlassWindowButton`** (e.g. “Open Glass Window” in newer builds). Current patch sets keep that call at the end of `buildContent`.
 
