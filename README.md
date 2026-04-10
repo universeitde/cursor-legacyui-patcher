@@ -16,7 +16,9 @@ Patches `workbench.desktop.main.js` and updates checksums in `product.json` (and
 
 **Stable (release):** the current **release** version this repo tracks is **3.0.12** → use **`3.0.12.patch.0\`**.
 
-**Pre-release (3.1):** **3.1.0-pre.25** → use **`3.1.0-pre.25.patch.0\`** (i18n **`E()`**; layouts **`cFS`**; clear **`Mh`**; enum **`ZB`**; StorageScope **`wi`**; opener **`AR`/`pFS`**, **`N,x`** tail; settings **`nB`**, footer stock **`E(2939)`**; Agent/Editor **`E(2942)`/`E(2943)`**; Browser **`E(2964)`**).
+**Pre-release (3.2):** **3.2.0-pre.6** → use **`3.2.0-pre.6.patch.0\`** (i18n **`E()`**; layouts **`y5S`**; clear **`Fh`**; enum **`sF`**; StorageScope **`fi`**; opener **`FR`/`k5S`**, **`N,x`** tail; settings **`sB`**, footer **`E(2939)`**; Agent/Editor **`E(2942)`/`E(2943)`**; Browser **`E(2964)`**).
+
+**Pre-release (3.1, outdated in repo):** **3.1.0-pre.25** → **`Outdated/3.1.0-pre.25.patch.0\`** (layouts **`cFS`**, **`Mh`**, **`ZB`**, **`wi`**, **`AR`/`pFS`**, **`nB`**).
 
 **Nightly (2.7 Insiders):** the latest **2.7** nightly covered here is **2.7.0-pre.183** → use **`2.7.0-pre.183.patch.0\`**.
 
@@ -26,7 +28,8 @@ Sorted with **newest first** below. Folders under `Outdated\` are archived / sup
 
 | Cursor version | Channel | Status | Folder |
 |----------------|---------|--------|--------|
-| **3.1.0-pre.25** | Pre-release (3.1) | Current | `3.1.0-pre.25.patch.0\` |
+| **3.2.0-pre.6** | Pre-release (3.2) | Current | `3.2.0-pre.6.patch.0\` |
+| 3.1.0-pre.25 | Pre-release (3.1) | Outdated | `Outdated/3.1.0-pre.25.patch.0\` |
 | 3.1.0-pre.21 | Pre-release (3.1) | Outdated | `Outdated/3.1.0-pre.21.patch.0\` |
 | 3.1.0-pre.12 | Pre-release (3.1) | Outdated | `Outdated/3.1.0-pre.12.patch.0\` |
 | 3.1.0-pre.11 | Pre-release (3.1) | Outdated | `Outdated/3.1.0-pre.11.patch.0\` |
@@ -92,11 +95,11 @@ Sorted with **newest first** below. Folders under `Outdated\` are archived / sup
 
 ## Notes
 
-- **Use the patcher that matches your exact Cursor version and channel** (see `product.json` → `version` or *About*): e.g. **3.0.12** (stable), **3.1.0-pre.25** (3.1 pre-release), **2.7.0-pre.183** (2.7 nightly). The wrong patch set may report “Targets not found” or break the workbench bundle.
+- **Use the patcher that matches your exact Cursor version and channel** (see `product.json` → `version` or *About*): e.g. **3.0.12** (stable), **3.2.0-pre.6** (3.2 pre-release), **2.7.0-pre.183** (2.7 nightly). The wrong patch set may report “Targets not found” or break the workbench bundle.
 - **Outdated** only means a newer patch folder exists in this repo for that line; an older folder is still valid if your app is still on that version.
 - From **2.7.0-pre.87** onward, stock `buildContent` includes **`appendGlassWindowButton`** (e.g. “Open Glass Window” in newer builds). Current patch sets keep that call at the end of `buildContent`.
-- **“Add layout” / custom layouts:** In recent builds the minified grid often gated the add tile on `n.type==="unsaved"`, which rarely matches, so the tile disappeared. Current **3.0.12** and **3.1.0-pre.25** patch sets show the add tile when the workbench is not applying a layout and the tile count is under the cap (`!isApplyingLayout && x < g`), similar to older UX (e.g. comparing against a side-by-side install like `cursor-old`).
-- **3.1 pre-release, `nls.messages.json`, and `cursor-old`:** The `E(n)` indices are **not stable** across versions. On **`cursor-old`**, the same index often means something different (e.g. **3072** might not be “Agent”)—always use the patch set built for **your** `product.json` version. In **3.1.0-pre.25**, Agent/Editor tiles use **`E(2942)`/`E(2943)`** (“Agent” / “Editor”); Zen tile label is **`"Zen"`**; Browser uses **`E(2964)`** (“Browser”); footer link uses **`E(2939)`** (“Settings”) before the patch replaces the label with “Cursor Settings” + keybinding. Minified symbols drift often (**pre.25**: **`cFS`**, **`Mh`**, **`ZB`**, **`wi`**, **`AR`/`pFS`**, **`nB`** vs **pre.21** **`vFS`**, **`Dh`**, **`eF`**, **`fi`**, **`ER`/`SFS`**). After any patcher update, **restore** the workbench backup and re-run if you had applied an older patch set.
+- **“Add layout” / custom layouts:** In recent builds the minified grid often gated the add tile on `n.type==="unsaved"`, which rarely matches, so the tile disappeared. Current **3.0.12** and **3.2.0-pre.6** patch sets show the add tile when the workbench is not applying a layout and the tile count is under the cap (`!isApplyingLayout && x < g`), similar to older UX (e.g. comparing against a side-by-side install like `cursor-old`).
+- **Pre-release, `nls.messages.json`, and `cursor-old`:** The `E(n)` indices are **not stable** across versions. On **`cursor-old`**, the same index often means something different—always use the patch set built for **your** `product.json` version. In **3.2.0-pre.6**, Agent/Editor **`E(2942)`/`E(2943)`**, Zen **`"Zen"`**, Browser **`E(2964)`**, footer **`E(2939)`** (stock “Settings” → patched “Cursor Settings” + keybinding). Minified names differ from **3.1.0-pre.25** (**`y5S`**, **`Fh`**, **`sF`**, **`fi`**, **`FR`/`k5S`**, **`sB`** vs **`cFS`**, **`Mh`**, **`ZB`**, **`wi`**, **`AR`/`pFS`**, **`nB`**). After any patcher update, **restore** the workbench backup and re-run if you had applied an older patch set.
 - **Updating the patcher after a git pull:** If you already patched the same Cursor version with an older copy of this repo, restore `workbench.desktop.main.js` from the backup next to it (or run `patcher.ps1 -Restore`), then run the patcher again so the latest replaces apply.
 
 ---
